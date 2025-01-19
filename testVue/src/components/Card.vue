@@ -15,8 +15,8 @@
         onClickDelete() {
             this.$emit('delete', this.id); 
         },
-        onSave() {
-            console.log('edit');
+        onEdit() {
+            console.log('edit', this.id);
         }
     }
    }
@@ -30,7 +30,7 @@
         <p>Materie: {{ this.materie }}</p>
         <div class="buttons">
             <MainButton @click="onClickDelete()">Delete</MainButton>
-            <MainButton @click="onSave()">Edit</MainButton>
+            <MainButton @click="onEdit()">Edit</MainButton>
         </div>
     </div>
 

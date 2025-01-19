@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
 import StudentView from '@/views/StudentView.vue'
 import App from '@/App.vue'
+import EditStudent from '@/components/EditStudent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,7 +12,9 @@ const router = createRouter({
     { path: '/', name: '/', component: HomeView,},
     { path: '/despre-noi', name: 'about', component: AboutView },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundView },
-    { path:'/student/:id', component: StudentView }
+    // { path: '/student/:id', component: StudentView },
+    { path: '/student/:id', component: EditStudent },
+    {path:'/student/:new', component: EditStudent}
     
     // {
     //   path: '/about',
