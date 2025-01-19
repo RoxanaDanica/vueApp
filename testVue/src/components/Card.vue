@@ -1,5 +1,5 @@
 <script>
-    import MainButton from './MainButton.vue'
+   import MainButton from './MainButton.vue'
 
    export default {
     props: {
@@ -16,7 +16,7 @@
             this.$emit('delete', this.id); 
         },
         onEdit() {
-            console.log('edit', this.id);
+            this.$emit('edit', this.id); 
         }
     }
    }

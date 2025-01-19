@@ -12,7 +12,6 @@ const router = createRouter({
     { path: '/', name: '/', component: HomeView,},
     { path: '/despre-noi', name: 'about', component: AboutView },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundView },
-    // { path: '/student/:id', component: StudentView },
     { path: '/student/:id', component: EditStudent },
     {path:'/student/:new', component: EditStudent}
     

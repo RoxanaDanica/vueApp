@@ -1,8 +1,10 @@
 const express = require('express')
+const cors = require('cors'); 
 const app = express()
 const port = 3000
 
 app.use(express.json());
+app.use(cors());
 
 const students = [
   { id: 0, nume: "Alex", prenume: "Popescu", materie: "Matematică" },
@@ -48,7 +50,6 @@ app.delete('/student/:studentId', (req, res) => { // delete student
 
 app.post('/student', (req, res) => { // Add new student
   const { id, nume, prenume, materie } = req.body;
-
 
   const newStudent = { id, nume, prenume, materie };
   students.push(newStudent);
