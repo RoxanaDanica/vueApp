@@ -38,7 +38,7 @@ app.get('/student/:studentId', (req, res) => { // get one student
 
 app.delete('/student/:studentId', (req, res) => { // delete student
   const studentId = parseInt(req.params.studentId);
-  const studentIndex = students.findIndex((student) => student.id === studentId);
+  const studentIndex = students.findIndex((student) => student.id == studentId);
 
   if (studentIndex !== -1) {
     const removedStudent = students.splice(studentIndex, 1); 
