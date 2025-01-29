@@ -14,6 +14,7 @@ export default {
     };
   },
   mounted() {
+    console.log('Fetching students ')
     fetch('http://localhost:3000/')
       .then(res => res.json())
       .then(data => this.students = data)
